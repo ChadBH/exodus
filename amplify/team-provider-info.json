@@ -10,6 +10,14 @@
       "StackName": "amplify-groupshare-dev-05653",
       "StackId": "arn:aws:cloudformation:us-east-1:694331601566:stack/amplify-groupshare-dev-05653/cf1cdda0-624e-11ed-aacc-0e88379e0563",
       "AmplifyAppId": "d21atx63n62mz0"
+    },
+    "categories": {
+      "api": {
+        "groupshare": {}
+      },
+      "hosting": {
+        "S3AndCloudFront": {}
+      }
     }
   }
 }
