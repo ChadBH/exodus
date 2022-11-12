@@ -1,0 +1,19 @@
+type Have @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  description: String
+  vaultID: ID! @index(name: "byVault")
+}
+
+type Need @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  description: String
+  vaultID: ID! @index(name: "byVault")
+}
+
+type Vault @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Code: String
+  Key: String
+  Have: [Have] @hasMany(indexName: "byVault", fields: ["id"])
+  Needs: [Need] @hasMany(indexName: "byVault", fields: ["id"])
+}
